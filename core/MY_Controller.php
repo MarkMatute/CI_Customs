@@ -34,6 +34,17 @@ class MY_Controller extends CI_Controller {
 	 */
 	public function __construct(){
 		parent::__construct();
+
+		/**
+		 * Custom JavaScripts per page
+		 */
+		 $this->data['js_includes'] = [];
+
+		/**
+		 * Custom JavaScripts Snippets
+		 */
+		 $this->data['embed_body'] = [];
+
 	}
 
 	/**
@@ -83,7 +94,7 @@ class Secured_Controller extends MY_Controller{
 		parent::__construct();
 
 		# Do some session / authentication validation here
-		
+
 		$this->view_template = 'templates/secured';
 	}
 
